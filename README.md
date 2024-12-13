@@ -25,10 +25,6 @@
 - 依存関係をインストールします:
     bash
     composer install
-
-- アプリケーションを起動します:
-    bash
-    php -S localhost:8000
     
 ## ③DEMO動画
 
