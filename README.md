@@ -5,20 +5,28 @@
 - このプロジェクトファイルは、MP3 ファイルの ID3 タグを編集するためのウェブアプリケーションのアルファ版です。
 - 複数の MP3 ファイルをアップロードし、それらのタイトル、アーティスト名、アルバム名、アートワークなどの ID3 タグ情報を編集し、編集後のデータをダウンロードできます。
 
-## 設定をしたサーバー要件
+## テスト設定をしたサーバー要件
 
-- 本アプリケーションをテスト動作させるために、以下の PHP 設定をしています:
+- テスト動作させるために、以下の PHP 設定をしています:
 
-- ```ini
+- ini
+  upload_max_filesize = 50M ; アップロード可能な単一ファイルの最大サイズ
+  post_max_size = 100M ; POST リクエスト全体の最大サイズ
+  max_execution_time = 300 ; スクリプトの実行時間の上限
 
-  ```
-- upload_max_filesize = 50M ; アップロード可能な単一ファイルの最大サイズ
-- post_max_size = 100M ; POST リクエスト全体の最大サイズ
-- max_execution_time = 300 ; スクリプトの実行時間の上限
+- アップロードされたデータは以下のディレクトリに保存されます:
+  /Applications/XAMPP/xamppfiles/htdocs/mp3tagedit/uploads
 
-- 本アプリケーションでは、アップロードされたデータは以下のディレクトリに保存されます:
-- /Applications/XAMPP/xamppfiles/htdocs/mp3tagedit/uploads
+## セットアップ手順メモ
 
+- 依存関係をインストールします:
+    bash
+    composer install
+
+- アプリケーションを起動します:
+    bash
+    php -S localhost:8000
+    
 ## ③DEMO
 
 デプロイしている場合は URL を記入（任意）
