@@ -11,10 +11,13 @@
 
 - ini
   upload_max_filesize = 50M ; アップロード可能な単一ファイルの最大サイズ
+  
   post_max_size = 100M ; POST リクエスト全体の最大サイズ
+  
   max_execution_time = 300 ; スクリプトの実行時間の上限
 
 - アップロードされたデータは以下のディレクトリに保存されます:
+  
   /Applications/XAMPP/xamppfiles/htdocs/mp3tagedit/uploads
 
 ## セットアップ手順メモ
