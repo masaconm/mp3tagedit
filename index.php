@@ -90,10 +90,12 @@ if ( isset( $_POST[ 'action' ] ) && $_POST[ 'action' ] === 'save' ) {
 
     $tagwriter = new getid3_writetags();
     $tagwriter->filename = $filePath;
-    $tagwriter->tagformats = [ 'id3v2.4', 'id3v1' ];
+    $tagwriter->tagformats = ['id3v2.4']; // タグフォーマットをID3v2.4に指定
+    $tagwriter->tag_encoding = 'UTF-8';   // UTF-8エンコーディングを明示的に指定
     $tagwriter->overwrite_tags = true;
     $tagwriter->remove_other_tags = false;
     $tagwriter->tag_data = $TagData;
+
 
     if ( $tagwriter->WriteTags() ) {
       echo "<p class='text-green-600 font-semibold'>✔ Successfully updated tags for: "
