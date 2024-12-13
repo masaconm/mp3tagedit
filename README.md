@@ -30,11 +30,9 @@
     bash
     php -S localhost:8000
     
-## ③DEMO
+## ③DEMO動画
 
-
-
-Uploading DEMO_2024-12-13 12.56.19.mov…
+https://github.com/masaconm/mp3tagedit/issues/1#issue-2737353033
 
 
 
